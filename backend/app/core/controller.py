@@ -61,7 +61,7 @@ async def login_route(
 
 
 @router.get("/")
-def read_root(request: Request):
+async def read_root(request: Request):
     return {"Hello": request.session.get("username")}
 
 
